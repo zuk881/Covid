@@ -8,4 +8,4 @@ retrieves lastest info on:
 * Recovered
 ### There is also a submission form to add additional countries.
 
-## Link to deployed application: https://zuk881.github.io/Covid_19/
+## Link to deployed application:
