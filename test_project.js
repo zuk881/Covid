@@ -17,8 +17,21 @@
 //     .catch((error)=>{
 //       console.log(error)
 //     })
+$(document).ready(function () {
+  // array to hold data values, button text, and search parameters
+  var giphy = ["US", "Italy", "Canada", "Germany"];
 
-
+ // function to loop through the array and display buttons
+function renderButtons() {
+  $("#buttons-view").empty();
+  for (var i = 0; i < giphy.length; i++) {
+    var a = $("<button>");
+    a.addClass("gif-button");
+    a.attr("data-name", giphy[i]);
+    a.text(giphy[i]);
+    $("#buttons-view").append(a);
+  }
+} 
 
 var search;
 
@@ -26,12 +39,19 @@ $("#add-cat").on("click", function (event) {
   event.preventDefault();
   search = $("#gif-input").val().trim();
   console.log(search)
-  api();
+  giphy.push(search);
+  renderButtons();
 });
 
 
 function api() {
+  
+    
   $("#api-result").empty();
+
+  // variable to hold the data of button pushed that is then added to search
+  search = $(this).attr("data-name");
+
   var settings = {
     "async": true,
     "crossDomain": true,
@@ -68,3 +88,9 @@ function displayApi(response) {
   }
 }
 
+// button event listener to display 10 gifs 
+$(document).on("click", ".gif-button", api);
+
+renderButtons();
+
+});
