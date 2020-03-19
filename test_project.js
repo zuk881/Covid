@@ -68,7 +68,8 @@ function api() {
   });
 }
 
-function displayApi(response) {
+ 
+ function displayApi(response) {
   var result = response.data.covid19Stats
 
   for (var i = 0; i < result.length; i++) {
@@ -83,6 +84,7 @@ function displayApi(response) {
     resultDiv.append("Died: " + resultDied + "<br>");
     resultDiv.append("Recovered: " + resultRecovered + "<br>");
     resultDiv.addClass("col-sm-2");
+    resultDiv.addClass("res-card");
     $("#api-result").append(resultDiv)
 
   }
