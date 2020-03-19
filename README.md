@@ -6,6 +6,6 @@ retrieves lastest info on:
 * Confirmed cases
 * Died
 * Recovered
-### There is also a submission form to add addditional countries.
+### There is also a submission form to add additional countries.
 
-## Link to deployed applicaion: https://zuk881.github.io/Covid_19/
+## Link to deployed application: https://zuk881.github.io/Covid_19/
